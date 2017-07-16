@@ -1,15 +1,15 @@
 import React from 'react';
-import Squares from './Squares.jsx';
+import Squares from 'containers/Squares';
 import UserDot from 'containers/UserDot';
 
-const GameContainer = (props) => {
+export default function GameContainer() {
   return (
     <div
       style={{
         position: 'relative',
         width: '706px',
         height: '706px',
-        backgroundColor: '#999900',
+        backgroundColor: '#606060',
         border: '3px solid #999900',
         margin: 'auto',
       }}
@@ -19,5 +19,3 @@ const GameContainer = (props) => {
     </div>
   );
 }
-
-export default GameContainer;

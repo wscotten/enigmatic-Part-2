@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = (props) => {
+export default function Header() {
     return (
       <h1
         style={{
@@ -16,5 +16,3 @@ const Header = (props) => {
       </h1>
     );
 }
-
-export default Header;

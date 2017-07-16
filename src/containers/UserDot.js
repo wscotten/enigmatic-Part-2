@@ -6,18 +6,20 @@ import store from 'store/store';
 
 document.onkeydown = function(evt) {
   evt.preventDefault()
+  const xPos = store.getState().xPos;
+  const yPos = store.getState().yPos;
   switch(evt.keyCode) {
     case 37:
-      store.dispatch(move_left());
+      store.dispatch(move_left(xPos, yPos));
       break;
     case 38:
-      store.dispatch(move_up());
+      store.dispatch(move_up(xPos, yPos));
       break;
     case 39:
-      store.dispatch(move_right());
+      store.dispatch(move_right(xPos, yPos));
       break;
     case 40:
-      store.dispatch(move_down());
+      store.dispatch(move_down(xPos, yPos));
       break;
     default:
       // do nothing
