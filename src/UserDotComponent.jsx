@@ -1,21 +1,21 @@
 import React from 'react';
+import {connect} from 'react-redux'
 
-const UserDot = (props) => {
+const UserDotComponent = ({xPos, yPos}) => {
   return (
     <div
       style={{
         position: 'absolute',
-        bottom: '0px',
-        right: '0px',
+        left: xPos + 'px',
+        top: yPos + 'px',
         width: '36px',
         height: '36px',
         borderRadius: '50%',
         backgroundColor: 'red',
-        margin: '132px',
       }}
     >
     </div>
   );
 }
 
-export default UserDot;
+export default UserDotComponent;

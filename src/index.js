@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import './index.css';
@@ -8,52 +7,11 @@ import App from './App.jsx';
 import registerServiceWorker from './registerServiceWorker';
 
 
-const initialState = {
-  xPos: 500,
-  yPos: 500,
-};
+import { move_left, move_right } from './actions/xPos';
+import { move_up, move_down } from './actions/yPos';
 
-const reducer = (state, action) => {
-  switch (action.type) {
-    case 'MOVE_LEFT':
-      return Object.assign({}, state, {
-        xPos: state.xPos - 5,
-      });
-    case 'MOVE_UP':
-      return Object.assign({}, state, {
-        yPos: state.yPos - 5,
-      });
-    case 'MOVE_RIGHT':
-      return Object.assign({}, state, {
-        xPos: state.xPos + 5,
-      });
-    case 'MOVE_DOWN':
-      return Object.assign({}, state, {
-        yPos: state.yPos + 5,
-      });
-    default:
-      return state;
-  }
-};
-
-const store = createStore(reducer, initialState);
-window.store = store;
-
-const move_left = () => ({
-  type: 'MOVE_LEFT',
-});
-
-const move_up = () => ({
-  type: 'MOVE_UP',
-});
-
-const move_right = () => ({
-  type: 'MOVE_RIGHT',
-});
-
-const move_down = () => ({
-  type: 'MOVE_DOWN',
-});
+import store from './store/store';
+import { Provider } from 'react-redux';
 
 document.onkeydown = function(evt) {
   switch(evt.keyCode) {
@@ -75,5 +33,8 @@ document.onkeydown = function(evt) {
   }
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <Provider store={store}>
+    <App/>
+  </Provider>, document.getElementById('root'));
 registerServiceWorker();
