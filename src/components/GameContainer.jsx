@@ -1,6 +1,6 @@
 import React from 'react';
 import Squares from './Squares.jsx';
-import UserDotContainer from './UserDotContainer';
+import UserDot from 'containers/UserDot';
 
 const GameContainer = (props) => {
   return (
@@ -15,7 +15,7 @@ const GameContainer = (props) => {
       }}
     >
       <Squares />
-      <UserDotContainer />
+      <UserDot />
     </div>
   );
 }

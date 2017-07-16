@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux'
 
-const UserDotComponent = ({xPos, yPos}) => {
+const UserDot = ({xPos, yPos}) => {
   return (
     <div
       style={{
@@ -18,4 +18,4 @@ const UserDotComponent = ({xPos, yPos}) => {
   );
 }
 
-export default UserDotComponent;
+export default UserDot;

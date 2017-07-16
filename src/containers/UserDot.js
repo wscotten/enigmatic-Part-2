@@ -1,8 +1,8 @@
 import { connect } from 'react-redux'
-import UserDotComponent from './UserDotComponent.jsx'
-import { move_left, move_right } from './actions/xPos';
-import { move_up, move_down } from './actions/yPos';
-import store from './store/store';
+import UserDot from 'components/UserDot.jsx'
+import { move_left, move_right } from 'actions/xPos';
+import { move_up, move_down } from 'actions/yPos';
+import store from 'store/store';
 
 document.onkeydown = function(evt) {
   evt.preventDefault()
@@ -35,6 +35,6 @@ const mapStateToProps = (state, ownProps) => {
 const UserDotContainer = connect(
   mapStateToProps,
   null,
-)(UserDotComponent)
+)(UserDot)
 
 export default UserDotContainer;
