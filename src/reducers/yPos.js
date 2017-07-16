@@ -1,4 +1,4 @@
-const yPosReducer = (yPos = 500, action) => {
+const yPosReducer = (yPos = 532, action) => {
   switch (action.type) {
     case 'MOVE_UP':
       return yPos - 5;

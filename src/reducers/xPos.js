@@ -1,4 +1,4 @@
-const xPosReducer = (xPos = 500, action) => {
+const xPosReducer = (xPos = 532, action) => {
   switch (action.type) {
     case 'MOVE_LEFT':
       return xPos - 5;
