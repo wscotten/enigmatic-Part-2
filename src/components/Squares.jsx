@@ -14,7 +14,6 @@ export default function Squares({path}) {
             width: '100px',
             height: '100px',
             backgroundColor: '#606060',
-            border: '3px solid #999900',
           }}
         >
         </div>

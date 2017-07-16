@@ -1,5 +1,5 @@
-const yPosReducer = (yPos = 532, action) => {
-  switch (action.type) {
+export default function yPosReducer(yPos = 532, {type}) {
+  switch (type) {
     case 'MOVE_UP':
       return yPos - 5;
     case 'MOVE_DOWN':
@@ -8,5 +8,3 @@ const yPosReducer = (yPos = 532, action) => {
       return yPos;
   }
 }
-
-export default yPosReducer;
