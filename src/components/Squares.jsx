@@ -1,34 +1,23 @@
 import React from 'react';
+import {HiddenSquare} from './HiddenSquare';
+import {VisibleSquare} from './VisibleSquare';
 
 export default function Squares({path}) {
   const blocks = [];
-  for(let i = 1; i < 50; i++) {
+  for(let i = 0; i < 49; i++) {
     blocks.push(i);
   }
-  const blockDivs = blocks.map((block, i) => {
+  const blockDivs = blocks.map((block) => {
     for(let j = 0; j < path.length; j++) {
-      if(i === path[j]) {
-        return <div
-          key={block.toString()}
-          style={{
-            width: '100px',
-            height: '100px',
-            backgroundColor: '#606060',
-          }}
-        >
-        </div>
+      if(block === path[j]) {
+        return (
+          <HiddenSquare key={block.toString()} />
+        );
       }
     }
-    return <div
-      key={block.toString()}
-      style={{
-        width: '100px',
-        height: '100px',
-        backgroundColor: '#FFFF66',
-        border: '3px solid #999900',
-      }}
-    >
-    </div>
+    return (
+      <VisibleSquare delay={1.2 - Math.floor(block / 7) / 5} key={block.toString()} />
+    );
   });
   return (
     <div style={{

@@ -1,18 +1,10 @@
-import React from 'react';
+import styled from 'styled-components'
 
-export default function Header() {
-    return (
-      <h1
-        style={{
-          padding: '10px',
-          textAlign: 'center',
-          fontFamily: 'Calligraffitti',
-          fontSize: '40px',
-          color: 'white',
-          fontWeight: 'bold',
-        }}
-      >
-        Enigmatic
-      </h1>
-    );
-}
+export const Header = styled.h1`
+  padding: 10px;
+  text-align: center;
+  font-family: Calligraffitti;
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+`;

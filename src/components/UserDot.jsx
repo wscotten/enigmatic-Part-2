@@ -1,18 +1,11 @@
-import React from 'react';
+import styled from 'styled-components';
 
-export default function UserDot({xPos, yPos}){
-  return (
-    <div
-      style={{
-        position: 'absolute',
-        left: xPos + 'px',
-        top: yPos + 'px',
-        width: '36px',
-        height: '36px',
-        borderRadius: '50%',
-        backgroundColor: 'red',
-      }}
-    >
-    </div>
-  );
-}
+export const UserDot = styled.div`
+  position: absolute;
+  left: ${props => props.xPos}px;
+  top: ${props => props.yPos}px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: red;
+`;

@@ -4,13 +4,16 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "radium": "^0.19.1",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
     "react-scripts": "1.0.10",
+    "react-transition-group": "^1.2.0",
     "redux": "^3.7.2",
-    "reselect": "^3.0.1"
+    "reselect": "^3.0.1",
+    "styled-components": "^2.1.1"
   },
   "scripts": {
     "start": "NODE_PATH=src react-scripts start",

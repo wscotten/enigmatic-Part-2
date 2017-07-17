@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import UserDot from 'components/UserDot.jsx'
+import {UserDot} from 'components/UserDot.jsx'
 import { move_left, move_right } from 'actions/xPos';
 import { move_up, move_down } from 'actions/yPos';
 import store from 'store/store';
